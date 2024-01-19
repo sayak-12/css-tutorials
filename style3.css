@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar{
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(to right, pink, rgb(224, 64, 91));
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: fixed;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.315);
+}
+.options{
+    display: flex;
+    gap: 25px;
+
+}
+button{
+    transition: 0.3s;
+}
+.p{
+    color: rgb(251, 238, 238);
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+.section{
+    display: flex;
+    width: 100%;
+    height: max-content;
+    padding: 8% 5%;
+    gap: 50px;
+    background: linear-gradient(to right, pink, rgb(224, 64, 91));
+}
+.sec1{
+    padding-top: calc(10vh + 8%);
+}
+.text{
+    width: 60%;
+    font-style:italic ;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+.text p{
+    text-align: justify;
+}
+.image{
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+.image img{
+    height: auto;
+    width: 100%;
+}
+.text button{
+    background-color: rgb(137, 22, 22);
+    color: aliceblue;
+    border: none;
+    width: 150px;
+    padding: 10px 0;
+    border-radius: 6px;
+}
+
+.section:nth-child(odd){
+    flex-direction: row-reverse;
+}
+
+.p::before{
+    content: "";
+    height: 2px;
+    width: 100%;
+    display: flex;
+    background-color: rgb(90, 20, 220);
+    transform:  scaleX(0);
+    transform-origin: left;
+    transition: 0.3s;
+
+}
+.p::after{
+    content: "";
+    height: 2px;
+    width: 100%;
+    display: flex;
+    background-color: rgb(90, 20, 220);
+    position: absolute;
+    right: 0;
+    transform:  scaleX(0);
+    transform-origin: right;
+    transition: 0.3s;
+
+}
+.p:hover{
+    color: rgb(214, 255, 131);
+}
+.p:hover::before{
+    transform:  scaleX(1);
+}
+.p:hover::after{
+    transform:  scaleX(1);
+}
+button:active{
+    color: yellowgreen;
+}
